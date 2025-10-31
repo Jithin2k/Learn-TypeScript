@@ -35,11 +35,30 @@
 // };
 
 // Type
+// type Details = {
+//   name: string;
+//   age: number;
+//   salary: number;
+//   getName: () => void;
+// };
+
+// let userDetail2 : Details = {
+//     name : "Jithin",
+//     age : 20,
+//     salary : 55555,
+//     getName () {
+//         console.log("jii");
+
+//     }
+// };
+
+// Union/Optional
+
 type Details = {
   name: string;
-  age: number;
-  salary: number;
-  getName: () => void;
+  age: number | string;
+  salary: number | string;
+  getName ?: () => void;
 };
 
 let userDetail2 : Details = {
@@ -51,3 +70,5 @@ let userDetail2 : Details = {
 
     }
 };
+
+let skill : (string | number)[] = ["js","ts",23,4]
