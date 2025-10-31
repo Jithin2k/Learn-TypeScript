@@ -1,16 +1,35 @@
-// Infer Types
-const userName = "Debug Media";
-let subscribes = 30000;
+// // Infer Types
+// const userName = "Debug Media";
+// let subscribes = 30000;
 
-// Explicit Types
-let user : string = "Debug Media";
-let sub : number = 20000;
-let isSub : boolean = true;
+// // Explicit Types
+// let user : string = "Debug Media";
+// let sub : number = 20000;
+// let isSub : boolean = true;
 
-let skills : string[] = ["TS","JS"];
-let age : number[] = [1,2,3,4]
+// let skills : string[] = ["TS","JS"];
+// let age : number[] = [1,2,3,4]
 
-let userDetail : {name:string,age:number} = {
+// let userDetail : {name:string,age:number} = {
+//     name : "Jithin",
+//     age : 15
+// };
+
+// Interface
+
+interface Details{
+    name : string;
+    age : number;
+    salary : number;
+    getName : () => void;
+}
+
+let userDetail2 : Details = {
     name : "Jithin",
-    age : 15
+    age : 20,
+    salary : 55555,
+    getName () {
+        console.log("jii");
+        
+    }
 };
