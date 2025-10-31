@@ -32,11 +32,15 @@ age?: number; // optional
 * ENUMs - In TypeScript, an enum (short for "enumeration") is a special type that lets you define a set of named constants—making your code more readable and organized when working with fixed sets of values.
 
 enum Direction {
-  North,   // 0
-  East,    // 1
-  South,   // 2
-  West     // 3
+North, // 0
+East, // 1
+South, // 2
+West // 3
 }
 
 let move = Direction.East;
 console.log(move); // 1
+
+* Type Castin in TS - Type casting in TypeScript is the process of explicitly telling the compiler to treat a variable as a specific type, even if its original type is unknown or ambiguous. It’s especially useful when working with third-party libraries, dynamic data, or DOM elements.
+  eg: let value: unknown = "hello";
+  let length = (value as string).length; // ✅ treated as string

@@ -180,3 +180,8 @@
   
 // }
 // getStatus("1234",StatusType.COMPLETED)
+
+//  ! Type Casting
+
+// let userName = "Jithin" as const;
+// let num = 24 as number;
