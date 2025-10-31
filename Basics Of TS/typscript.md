@@ -20,3 +20,11 @@ Optional properties are defined using a ? after the property name. - interface U
 name: string;
 age?: number; // optional
 }
+
+- Functions - In TypeScript, functions are typed blocks of reusable code that can accept parameters and return values with clearly defined types. This helps catch errors early and improves code clarity
+
+* Named Types - med types in TypeScript refer to custom types that are given a specific name using either type aliases or interface declarations. These names can then be reused throughout your codebase to enforce structure and improve readability.
+
+* Function Overriding -Function overloading in TypeScript allows you to define multiple function signatures for a single function name, enabling it to handle different types or numbers of parameters while maintaining type safety.
+
+* Generics in TS - Generics are like placeholders for types. Instead of hardcoding a type like string or number, you use a type variable (usually T) that gets replaced when the function or class is used.
