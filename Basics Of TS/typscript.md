@@ -28,3 +28,15 @@ age?: number; // optional
 * Function Overriding -Function overloading in TypeScript allows you to define multiple function signatures for a single function name, enabling it to handle different types or numbers of parameters while maintaining type safety.
 
 * Generics in TS - Generics are like placeholders for types. Instead of hardcoding a type like string or number, you use a type variable (usually T) that gets replaced when the function or class is used.
+
+* ENUMs - In TypeScript, an enum (short for "enumeration") is a special type that lets you define a set of named constants—making your code more readable and organized when working with fixed sets of values.
+
+enum Direction {
+  North,   // 0
+  East,    // 1
+  South,   // 2
+  West     // 3
+}
+
+let move = Direction.East;
+console.log(move); // 1

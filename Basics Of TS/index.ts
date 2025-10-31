@@ -136,33 +136,47 @@
 // getAge<string>("20");
 // getAge<number>(20);
 
-type UserDetails = {
-  name: string;
-  age: number;
-};
+// type UserDetails = {
+//   name: string;
+//   age: number;
+// };
 
-// ? Merging types
-type AdminDetails = UserDetails & {
-  // firstname: string;
-  role: string;
-};
+//  ? Merging types
+// type AdminDetails = UserDetails & {
+//   // firstname: string;
+//   role: string;
+// };
 
-const userDetails: UserDetails = {
-  name: "Jithin",
-  age: 20,
-};
+// const userDetails: UserDetails = {
+//   name: "Jithin",
+//   age: 20,
+// };
 
-const adminDetails: AdminDetails = {
-  name: "Nithin",
-  age :25,
-  role: "admin",
-};
+// const adminDetails: AdminDetails = {
+//   name: "Nithin",
+//   age :25,
+//   role: "admin",
+// };
 
-function getDetails<T>(details : T) : T {
-  return details;
-}
+// function getDetails<T>(details : T) : T {
+//   return details;
+// }
 
-const value = getDetails<UserDetails>(userDetails);
-const adminValue = getDetails<AdminDetails>(adminDetails)
+// const value = getDetails<UserDetails>(userDetails);
+// const adminValue = getDetails<AdminDetails>(adminDetails)
 
+// !ENUMS
 
+// type StatusType = "pending" | "completed" | "failed";
+
+// enum StatusType {
+//   PENDING,
+//   COMPLETED,
+//   FAILED,
+// }
+
+// function getStatus(orderID: string, status : StatusType) {
+//   console.log(orderID, "==",status);
+  
+// }
+// getStatus("1234",StatusType.COMPLETED)
