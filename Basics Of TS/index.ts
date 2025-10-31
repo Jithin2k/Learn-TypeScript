@@ -17,12 +17,30 @@
 
 // Interface
 
-interface Details{
-    name : string;
-    age : number;
-    salary : number;
-    getName : () => void;
-}
+// interface Details{
+//     name : string;
+//     age : number;
+//     salary : number;
+//     getName : () => void;
+// }
+
+// let userDetail2 : Details = {
+//     name : "Jithin",
+//     age : 20,
+//     salary : 55555,
+//     getName () {
+//         console.log("jii");
+
+//     }
+// };
+
+// Type
+type Details = {
+  name: string;
+  age: number;
+  salary: number;
+  getName: () => void;
+};
 
 let userDetail2 : Details = {
     name : "Jithin",
@@ -30,6 +48,6 @@ let userDetail2 : Details = {
     salary : 55555,
     getName () {
         console.log("jii");
-        
+
     }
 };
