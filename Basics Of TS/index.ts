@@ -177,7 +177,7 @@
 
 // function getStatus(orderID: string, status : StatusType) {
 //   console.log(orderID, "==",status);
-  
+
 // }
 // getStatus("1234",StatusType.COMPLETED)
 
@@ -185,3 +185,18 @@
 
 // let userName = "Jithin" as const;
 // let num = 24 as number;
+
+// !KEY OF/TYPE OF
+
+const  StatusType = {
+  PENDING : "pending",
+  COMPLETED : "completed",
+  FAILED : "failed",
+}
+
+function getStatus(orderID : string,status :keyof typeof StatusType){
+    console.log(orderID,"==",StatusType[status]);
+    
+}
+
+ getStatus("1234","COMPLETED")

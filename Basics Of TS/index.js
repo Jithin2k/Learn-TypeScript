@@ -128,13 +128,25 @@
 // const adminValue = getDetails<AdminDetails>(adminDetails)
 // !ENUMS
 // type StatusType = "pending" | "completed" | "failed";
-var StatusType;
-(function (StatusType) {
-    StatusType[StatusType["PENDING"] = 0] = "PENDING";
-    StatusType[StatusType["COMPLETED"] = 1] = "COMPLETED";
-    StatusType[StatusType["FAILED"] = 2] = "FAILED";
-})(StatusType || (StatusType = {}));
+// enum StatusType {
+//   PENDING,
+//   COMPLETED,
+//   FAILED,
+// }
+// function getStatus(orderID: string, status : StatusType) {
+//   console.log(orderID, "==",status);
+// }
+// getStatus("1234",StatusType.COMPLETED)
+//  ! Type Casting
+// let userName = "Jithin" as const;
+// let num = 24 as number;
+// !KEY OF/TYPE OF
+var StatusType = {
+    PENDING: "pending",
+    COMPLETED: "completed",
+    FAILED: "failed",
+};
 function getStatus(orderID, status) {
-    console.log(orderID, "==", status);
+    console.log(orderID, "==", StatusType[status]);
 }
-getStatus("1234", StatusType.COMPLETED);
+getStatus("1234", "COMPLETED");
