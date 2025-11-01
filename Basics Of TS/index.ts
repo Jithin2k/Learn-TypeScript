@@ -186,17 +186,70 @@
 // let userName = "Jithin" as const;
 // let num = 24 as number;
 
-// !KEY OF/TYPE OF
+// // ! KEY OF/TYPE OF
 
-const  StatusType = {
-  PENDING : "pending",
-  COMPLETED : "completed",
-  FAILED : "failed",
-}
+// const  StatusType = {
+//   PENDING : "pending",
+//   COMPLETED : "completed",
+//   FAILED : "failed",
+// }
 
-function getStatus(orderID : string,status :keyof typeof StatusType){
-    console.log(orderID,"==",StatusType[status]);
+// function getStatus(orderID : string,status :keyof typeof StatusType){
+//     console.log(orderID,"==",StatusType[status]);
     
-}
+// }
 
- getStatus("1234","COMPLETED")
+//  getStatus("1234","COMPLETED")
+
+// !Utility Types
+
+// type Users = {
+//  name :string;
+//     age : number;
+// }
+
+// & Readonly
+// const newUser : Readonly <Users> = {
+//     name : "debug media",
+//     age : 99
+// }
+
+
+// &Partial
+// const newUser : Partial <Users> = {
+//     name : "debug media",
+//     age : 99
+// }
+
+// newUser.age = 66;
+// 
+
+// &Required
+// const newUser : Required <Users> = {
+//     name : "debug media",
+//     age : 99
+// }
+
+
+// &Pick
+// const newUser : Pick <Users,"name"> = {
+//     name : "debug media",
+// }
+
+// &Omit
+// const newUser : Omit <Users , "age"> = {
+//     name : "debug media",
+// }
+
+// &Exclude
+// type StatusType = "pending" | "completed" | "failed";
+// const status : Exclude<StatusType,"failed" > = ""
+
+
+// &Record
+type Food = Record<string,string>;
+
+const food : Food = {
+    PIZZA : "PIZZA",
+    CHICKEN : "CHICKEN"
+}

@@ -41,6 +41,56 @@ West // 3
 let move = Direction.East;
 console.log(move); // 1
 
-* Type Castin in TS - Type casting in TypeScript is the process of explicitly telling the compiler to treat a variable as a specific type, even if its original type is unknown or ambiguous. It’s especially useful when working with third-party libraries, dynamic data, or DOM elements.
+- Type Castin in TS - Type casting in TypeScript is the process of explicitly telling the compiler to treat a variable as a specific type, even if its original type is unknown or ambiguous. It’s especially useful when working with third-party libraries, dynamic data, or DOM elements.
   eg: let value: unknown = "hello";
+
   let length = (value as string).length; // ✅ treated as string
+
+* type of - typeof lets you extract the type of a variable or object.
+  Example -- const user = {
+  name: "Jithin",
+  age: 25,
+  };
+
+type UserType = typeof user;
+
+<!-- Output -->
+
+{
+name: string;
+age: number;
+}
+
+- key of - keyof gives you a union of property names (keys) from a type.
+
+type UserType = {
+name: string;
+age: number;
+};
+
+type UserKeys = keyof UserType; // "name" | "age"
+
+<!-- Utility Types -->
+
+<!-- Readonly --> - Makes all properties of a type immutable (cannot be reassigned).
+
+<!-- Partial --> - Makes all properties of a type optional.
+
+<!-- Required --> -  Makes all optional properties required.
+
+<!-- Pick --> -  Creates a new type by selecting specific keys from an existing type
+
+<!-- Omit --> - Creates a new type by excluding specific keys from an existing type
+
+<!-- Exclude --> -  Exclude<T, U> is a utility type that removes from type T any types that are assignable to U. It’s super useful when you want to filter out specific members from a union type.
+
+Exclude<T, U>
+
+- T: the original union type
+- U: the type(s) you want to exclude from T
+
+<!-- Record --> - Record<K, T> is a utility type that constructs an object type with a set of keys K and values of type T. It’s perfect when you want to define an object with known keys and consistent value types. 
+Record<Keys, ValueType>
+- Keys: a union of string or number literal types
+- ValueType: the type of values for each key
+
