@@ -16,8 +16,8 @@ const App = () => {
       </Oscar>
       <Greet name="Viswas" num={89} isLoggedIn={true} />
       <Button
-        handleClick={() => {
-          console.log("clicked");
+        handleClick={(event,id) => {
+          console.log("clicked",event,id);
         }}
       />
     </div>
