@@ -89,8 +89,10 @@ Exclude<T, U>
 - T: the original union type
 - U: the type(s) you want to exclude from T
 
-<!-- Record --> - Record<K, T> is a utility type that constructs an object type with a set of keys K and values of type T. It’s perfect when you want to define an object with known keys and consistent value types. 
+<!-- Record --> - Record<K, T> is a utility type that constructs an object type with a set of keys K and values of type T. It’s perfect when you want to define an object with known keys and consistent value types.
+
 Record<Keys, ValueType>
+
 - Keys: a union of string or number literal types
 - ValueType: the type of values for each key
 
@@ -102,4 +104,14 @@ data = "hello";    // OK
 data = { x: 10 };  // OK
 data = () => {};   // OK -->
 
-<!-- unknown in TS -->
+<!-- unknown in TS --> - In TypeScript,  is a safer alternative to . It represents any value, but unlike , you can’t use it without first narrowing or asserting its type.
+<!-- 
+let value: unknown;
+
+value = 42;         // OK
+value = "hello";    // OK
+value = { x: 10 };  // OK -->
+
+<!-- never in TS --> - In TypeScript, never is a special type that represents values that never occur. It’s used to indicate that a function never returns, or a variable can’t possibly hold a value.
+
+<!-- void in TS --> - In TypeScript, void is a type that represents the absence of a value, most commonly used to indicate that a function does not return anything.

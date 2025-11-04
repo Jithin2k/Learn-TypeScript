@@ -265,3 +265,13 @@
 
 // userName as string
 
+// !never
+// function throwError(message : string) : never {
+//     throw new Error(message)
+// }
+
+// !void
+function logMessage(message : string) : void {
+   console.log(message);
+  
+}
