@@ -94,3 +94,12 @@ Record<Keys, ValueType>
 - Keys: a union of string or number literal types
 - ValueType: the type of values for each key
 
+<!-- any in TS --> - In TypeScript, any is a special type that tells the compiler to opt out of type checking for a particular variable. It essentially disables TypeScript’s static type system for that value.
+<!-- let data: any;
+
+data = 42;         // OK
+data = "hello";    // OK
+data = { x: 10 };  // OK
+data = () => {};   // OK -->
+
+<!-- unknown in TS -->

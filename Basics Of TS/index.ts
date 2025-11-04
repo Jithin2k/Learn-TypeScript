@@ -247,9 +247,21 @@
 
 
 // &Record
-type Food = Record<string,string>;
+// type Food = Record<string,string>;
 
-const food : Food = {
-    PIZZA : "PIZZA",
-    CHICKEN : "CHICKEN"
-}
+// const food : Food = {
+//     PIZZA : "PIZZA",
+//     CHICKEN : "CHICKEN"
+// }
+
+//  ! any - avoid using any 
+
+// let uersName : any = "jithin";
+
+// uersName.push();
+
+// !unknown
+// let userName : unknown = "jithin";
+
+// userName as string
+
